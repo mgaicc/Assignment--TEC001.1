@@ -11,10 +11,13 @@ print(f'Circumference: {circumference:.2f}')
 #Exercise 3
 length = float(input('Enter your length: '))
 width = float(input('Enter your width: '))
-area = length * width
-circumference = 2 * (width + length)
-print(f'Area: {area}')
-print(f'Circumference: {circumference}')
+if length < width:
+  print('Cannot calculate because rectangle require length > width')
+else:
+  area = length * width
+  circumference = 2 * (width + length)
+  print(f'Area: {area}')
+  print(f'Circumference: {circumference}')
 
 #Exercise 4
 first_number = int(input('Enter your first number: '))
