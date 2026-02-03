@@ -16,8 +16,8 @@ while True:
 print('Programs ends')
 
 #3rd Exercise
-smallest = float('inf')
-largest = float('-inf')
+store = []
+
 
 while True:
     number = input('Enter a number or empty string to quit: ')
@@ -25,8 +25,15 @@ while True:
         break
     else:   
         update_number = float(number)
-        smallest = min(smallest,update_number)
-        largest= max(largest,update_number)
+        store.append(update_number)
+        smallest = store[0]
+        largest = store[0]
+        for num in store:
+            if num > largest:
+                largest = num
+            elif num < smallest:
+                smallest = num
+
 print(f'The smallest number {smallest}, the largest number {largest}')
 
 #4th Exercise
@@ -79,3 +86,4 @@ def acronyms(words):
     return ''.join(stored)
 result = acronyms(phrase)
 print(result)
+
