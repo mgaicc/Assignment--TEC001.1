@@ -15,7 +15,7 @@ def color_checking(code):
     cases = '0123456789abcdef'
     if len(code) != 7:
         return False
-    if not color.startswith(''):
+    if not color.startswith('#'):
         return False
     for char in code[1:]:
         if char not in cases:
@@ -55,3 +55,4 @@ print(redact_phone_number(sample))
     
     
     
+
